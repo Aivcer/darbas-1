@@ -2,42 +2,178 @@
 
 using namespace std;
 
+struct struktura
+{
+    string line;
+};
+
 int main()
 {
+    struktura abc[100];
     string v;
+    int a, b, c, d;
     cout<< "Koks Jusu vardas?"<<endl;
     cin>>v;
+    cout<<"Keliu eiluciu remelio plotis?"<<endl;
+    cin>>a;
+    if(cin.fail())
+    {
+        cout << "Rasykite tik skaicius" << endl;
+        return 0;
+    }
+
+    b=a;
+    c=3+(2*a);
+    d=c;
 
     int cnt = 0;
     for(int i=0; v[i]; i++)
         cnt++;
-    cnt= cnt+10;
 
-    string l1="", l2="", l3="", l4="", l5="";
+    if(v[cnt-1]=='s')
+    {
+        cnt = cnt+10;
 
-    for(int i=0; i<cnt+4; i++)
-       l1+="*";
+        while(a!=0)
+        {
+            for(int i=-1; i<=cnt+b*2; i++)
+                abc[c].line+="*";
+            a--;
+            c--;
+        }
+        a=b;
 
-    l2="*";
-    for(int i=1; i<=cnt+2; i++)
-       l2+=" ";
-    l2+="*";
+        while(a!=0)
+        {
+            abc[c].line+="*";
+            a--;
+        }
+        a=b;
+        for(int i=1; i<=cnt+2; i++)
+            abc[c].line+=" ";
+        while(a!=0)
+        {
+            abc[c].line+="*";
+            a--;
+        }
+        a=b;
+        c--;
 
-    l3 = "* Sveikas, " + v + "!" + " *";
+        while(a!=0)
+        {
+            abc[c].line+="*";
+            a--;
+        }
+        a=b;
+        abc[c].line+=" Sveikas, " + v + "! ";
+        while(a!=0)
+        {
+            abc[c].line+="*";
+            a--;
+        }
+        a=b;
+        c--;
 
-    l4="*";
-    for(int i=1; i<=cnt+2; i++)
-       l4+=" ";
-    l4+="*";
+        while(a!=0)
+        {
+            abc[c].line+="*";
+            a--;
+        }
+        a=b;
+        for(int i=1; i<=cnt+2; i++)
+            abc[c].line+=" ";
+        while(a!=0)
+        {
+            abc[c].line+="*";
+            a--;
+        }
+        a=b;
+        c--;
 
-    for(int i=0; i<cnt+4; i++)
-       l5+="*";
+        while(a!=0)
+        {
+            for(int i=-1; i<=cnt+b*2; i++)
+                abc[c].line+="*";
+            a--;
+            c--;
+        }
+        for(int i=c; i<=d; i++)
+        {
+            cout<<abc[i].line<<endl;
+        }
+    }
 
-    cout<<l1<<endl;
-    cout<<l2<<endl;
-    cout<<l3<<endl;
-    cout<<l4<<endl;
-    cout<<l5<<endl;
+    else
+    {
+        cnt= cnt+9;
 
+        while(a!=0)
+        {
+            for(int i=-1; i<=cnt+b*2; i++)
+                abc[c].line+="*";
+            a--;
+            c--;
+        }
+        a=b;
+
+        while(a!=0)
+        {
+            abc[c].line+="*";
+            a--;
+        }
+        a=b;
+        for(int i=1; i<=cnt+2; i++)
+            abc[c].line+=" ";
+        while(a!=0)
+        {
+            abc[c].line+="*";
+            a--;
+        }
+        a=b;
+        c--;
+
+        while(a!=0)
+        {
+            abc[c].line+="*";
+            a--;
+        }
+        a=b;
+        abc[c].line+=" Sveika, " + v + "! ";
+        while(a!=0)
+        {
+            abc[c].line+="*";
+            a--;
+        }
+        a=b;
+        c--;
+
+        while(a!=0)
+        {
+            abc[c].line+="*";
+            a--;
+        }
+        a=b;
+        for(int i=1; i<=cnt+2; i++)
+            abc[c].line+=" ";
+        while(a!=0)
+        {
+            abc[c].line+="*";
+            a--;
+        }
+        a=b;
+        c--;
+
+        while(a!=0)
+        {
+            for(int i=-1; i<=cnt+b*2; i++)
+                abc[c].line+="*";
+            a--;
+            c--;
+        }
+        for(int i=c; i<=d; i++)
+        {
+            cout<<abc[i].line<<endl;
+        }
+    }
     return 0;
 }
