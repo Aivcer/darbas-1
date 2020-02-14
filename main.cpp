@@ -16,9 +16,9 @@ int main()
     cin>>v;
     cout<<"Keliu eiluciu remelio plotis?"<<endl;
     cin>>a;
-    if(cin.fail())
+    if(cin.fail() || a<0)
     {
-        cout << "Rasykite tik skaicius" << endl;
+        cout << "Rasykite tik teigiamus skaicius" << endl;
         return 0;
     }
 
